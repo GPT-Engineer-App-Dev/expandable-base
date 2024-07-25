@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,7 +10,7 @@ const Index = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`You entered: ${inputValue}`);
+    toast.success(`You entered: ${inputValue}`);
     setInputValue("");
   };
 
@@ -23,7 +24,7 @@ const Index = () => {
         <Card className="max-w-md mx-auto">
           <CardHeader>
             <CardTitle>Welcome</CardTitle>
-            <CardDescription>This is a simple card component you can build upon.</CardDescription>
+            <CardDescription>Enter some text and see it in a toast!</CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -33,13 +34,13 @@ const Index = () => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
-              <Button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white">
-                Submit
+              <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white">
+                Show Toast
               </Button>
             </form>
           </CardContent>
           <CardFooter className="flex justify-between">
-            <p className="text-sm text-muted-foreground">Footer content goes here</p>
+            <p className="text-sm text-muted-foreground">Try submitting some text!</p>
             <Link to="/about" className="text-primary hover:underline">
               About Us
             </Link>

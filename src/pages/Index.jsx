@@ -33,7 +33,9 @@ const Index = () => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
-              <Button type="submit">Submit</Button>
+              <Button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white">
+                Submit
+              </Button>
             </form>
           </CardContent>
           <CardFooter className="flex justify-between">

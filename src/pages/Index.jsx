@@ -49,7 +49,7 @@ const Index = () => {
       </main>
 
       <footer className="mt-8 text-center text-sm text-muted-foreground">
-        <p>&copy; 2024 My Bare-Bones App. All rights reserved.</p>
+        <p>&copy; 2024 My Bare-Bones App. Some rights reserved.</p>
       </footer>
     </div>
   );

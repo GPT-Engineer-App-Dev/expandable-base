@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,8 +36,11 @@ const Index = () => {
               <Button type="submit">Submit</Button>
             </form>
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex justify-between">
             <p className="text-sm text-muted-foreground">Footer content goes here</p>
+            <Link to="/about" className="text-primary hover:underline">
+              About Us
+            </Link>
           </CardFooter>
         </Card>
       </main>
